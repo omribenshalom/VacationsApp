@@ -1,0 +1,15 @@
+.Navbar {
+  background-color: rgb(245, 179, 35);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Navbar > .nav > span {
+  margin: 0 20px;
+}
+
+.Navbar > .nav > .navlink {
+  margin: 0 10px;
+}

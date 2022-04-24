@@ -1,0 +1,70 @@
+.VacationCard {
+  margin: 10px;
+  /* padding: 10px; */
+  width: 300px;
+
+  /* height: 200px; */
+  border: white 1px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.VacationCard > img {
+  /* position: absolute; */
+  max-width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  
+  opacity: 80%;
+}
+
+.VacationCard > h2 {
+  position: absolute;
+  top: 1px;
+
+  color: rgb(255, 255, 255);
+  text-shadow: 0 5px 5px rgb(97, 38, 67);
+
+  text-transform: uppercase;
+}
+
+.VacationCard > h3 {
+  margin: 0px 0;
+  background-color: rgb(43, 226, 141);
+}
+
+
+.VacationCard > p {
+  margin: 5px 0;
+  /* background-color: rgb(226, 183, 43); */
+}
+
+
+.VacationCard > h5 {
+  margin: 0px;
+  background-color: blueviolet;
+}
+
+.VacationCard > .bottomContainer > .actionsOnCard > .icon:hover {
+  color: blueviolet;
+  size: 30px;
+}
+
+
+.VacationCard > .bottomContainer {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    border-radius: 10px;
+    margin: 0;
+    padding: 10px;
+
+    height: 20px;
+}

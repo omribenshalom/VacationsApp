@@ -1,0 +1,35 @@
+.EditVacation {
+  background: cornflowerblue;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.EditVacation > form {
+  margin: 20px;
+  padding: 10px;
+  border: black 1px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.EditVacation > form > input {
+  width: 250px;
+}
+
+.EditVacation > form > button {
+  width: 150px;
+}
+
+.EditVacation > form > span {
+  color: rgb(160, 0, 0);
+  font-size: x-small;
+  font-weight: lighter;
+  font-style: italic;
+}

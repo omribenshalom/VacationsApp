@@ -1,0 +1,19 @@
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 10% 85% 5%; 
+}
+
+.App > main {
+  height: 100%;
+  background:cornflowerblue;
+  overflow-y: scroll;
+}
+
+/* p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+} */
