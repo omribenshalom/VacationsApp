@@ -1,6 +1,6 @@
 .Login {
 	height: 100%;
-	background:cornflowerblue;
+	/* background:cornflowerblue; */
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
@@ -11,7 +11,7 @@
 .Login > form {
 	margin: 20px;
 	padding: 10px;
-	border: black 1px solid;
+	border: white 1px solid;
     border-radius: 10px;
 	display: flex;
 	flex-direction: column;

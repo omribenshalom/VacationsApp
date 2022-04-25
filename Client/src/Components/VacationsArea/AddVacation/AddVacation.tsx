@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import vacationService from '../../../Services/VacationsService';
 import VacationModel from '../../../Models/VacationModel';
 import { useForm } from 'react-hook-form';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import notify from '../../../Services/NotifyService';
 
 import './AddVacation.css';
 
+import { IoIosArrowBack } from 'react-icons/io';
 
 function AddVacation(): JSX.Element {
   const [badDate, setBadDate] = useState<boolean>(false);
@@ -38,14 +39,10 @@ function AddVacation(): JSX.Element {
     }
   };
 
-  // const theme = createTheme({
-  //   palette: {},
-  // });
-
   return (
     <div className='AddVacation'>
-      <h3>add vacation</h3>
-      
+      <h2>New Vacation</h2>
+
       <form onSubmit={handleSubmit(submit)}>
         <input
           placeholder='Destination..'
@@ -62,11 +59,13 @@ function AddVacation(): JSX.Element {
             },
           })}
         />
+
         <span>{errors.destination?.message}</span>
         <br />
 
         <input
           placeholder='Description..'
+          type='text'
           {...register('description', {
             required: { value: true, message: 'description required.' },
             minLength: {
@@ -84,7 +83,7 @@ function AddVacation(): JSX.Element {
 
         <label>Start Date:</label>
         <input
-          placeholder='Description..'
+          className='dateInput'
           type='date'
           min={today}
           {...register('startDate', {
@@ -96,6 +95,7 @@ function AddVacation(): JSX.Element {
 
         <label>End Date:</label>
         <input
+          className='dateInput'
           type='date'
           min={today}
           {...register('endDate', {
@@ -121,26 +121,28 @@ function AddVacation(): JSX.Element {
         <span>{errors.price?.message}</span>
         <br />
 
-        <label> Image: </label>
+        <label>Upload Image:</label>
         <input
           type='file'
           accept='image/*'
+          id='imageUpload'
+          // style={{ display: "none" }}
           {...register('image', {
             required: { value: true, message: 'image required.' },
           })}
         />
         <span>{errors.image?.message}</span>
         <br />
-
-        <input type='submit' />
+        <input type='submit' value='Submit' />
       </form>
-      <button
-        onClick={() => {
-          navigate('/home');
-        }}
-      >
-        Back
-      </button>
+      <h2>
+        <IoIosArrowBack
+          className='icon'
+          onClick={() => {
+            navigate('/home');
+          }}
+        />
+      </h2>
     </div>
   );
 }

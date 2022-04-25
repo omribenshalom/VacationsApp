@@ -1,9 +1,13 @@
 .Navbar {
-  background-color: rgb(245, 179, 35);
+  /* background-color: #ec5990; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
+
+  background: #fff;
+  max-width: 800px;
+  width: 95%;
 }
 
 .Navbar > .nav > span {
@@ -11,5 +15,20 @@
 }
 
 .Navbar > .nav > .navlink {
-  margin: 0 10px;
+  margin: 0 7px;
+  padding: 5px 15px;
+
+  background-color: rgb(224, 230, 232);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.Navbar > .nav > .navlink:hover {
+  transition: 0.3s;
+  box-shadow: 2px 5px 10px #bf1650;
+}
+
+.Navbar > .nav > .navlink:active {
+  transition: 0.3s;
+  box-shadow: 2px 5px 20px #bf1650;
 }

@@ -11,6 +11,8 @@ import { useSelector } from 'react-redux';
 import SocketService from '../../../Services/SocketService';
 import notify from '../../../Services/NotifyService';
 
+import { RiAddLine } from 'react-icons/ri';
+import { IconButton } from '@mui/material';
 
 function VacationsList(): JSX.Element {
   const [user, setUser] = useState<UserModel>(null);
@@ -61,9 +63,20 @@ function VacationsList(): JSX.Element {
   return (
     <div className='VacationsList'>
       {isAdmin === 1 && (
-        <button>
-          <NavLink to='/add-vacation/'>Add Vacation</NavLink>
-        </button>
+        <NavLink
+          to='/add-vacation/'
+          className='navlink'
+          style={({ isActive }) =>
+            isActive
+              ? {
+                  color: '#fff',
+                  background: '#bf1650',
+                }
+              : { color: '#bf1650' }
+          }
+        >
+          Add Vacation
+        </NavLink>
       )}
 
       <div className='listContainer'>

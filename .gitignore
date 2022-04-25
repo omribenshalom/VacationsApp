@@ -1,6 +1,6 @@
-Client/
+Client/node_modules/
 
-Server-TS-SQL/
-Server-old/
+Server/node_modules/
+Server/.env/
 
 images-of-destinations/

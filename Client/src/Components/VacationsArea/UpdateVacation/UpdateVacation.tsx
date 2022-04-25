@@ -6,9 +6,17 @@ import vacationService from '../../../Services/VacationsService';
 import VacationModel from '../../../Models/VacationModel';
 import './UpdateVacation.css';
 import notify from '../../../Services/NotifyService';
+import { IoIosArrowBack } from 'react-icons/io';
 
 function UpdateVacation(): JSX.Element {
   const [badDate, setBadDate] = useState<boolean>(false);
+  const [today, setToday] = useState<string>('');
+
+  useEffect(() => {
+    const today = new Date().toLocaleDateString('en-CA');
+
+    setToday(today);
+  }, []);
 
   const { register, handleSubmit, formState, setValue, watch } =
     useForm<VacationModel>();
@@ -50,9 +58,11 @@ function UpdateVacation(): JSX.Element {
 
   return (
     <div className='EditVacation'>
+      <h2>Update Vacation</h2>
+
       <form onSubmit={handleSubmit(submit)}>
-        <label>Destination:</label>
         <input
+          placeholder='Destination..'
           type='text'
           {...register('destination', {
             required: { value: true, message: 'destination required.' },
@@ -69,8 +79,8 @@ function UpdateVacation(): JSX.Element {
         <span>{errors.destination?.message}</span>
         <br />
 
-        <label>Description:</label>
         <input
+          placeholder='Description..'
           type='text'
           {...register('description', {
             required: { value: true, message: 'description required.' },
@@ -90,7 +100,7 @@ function UpdateVacation(): JSX.Element {
         <label>Start Date:</label>
         <input
           type='date'
-          min='2022-03-22'
+          min={today}
           {...register('startDate', {
             required: { value: true, message: 'start date required.' },
           })}
@@ -100,8 +110,9 @@ function UpdateVacation(): JSX.Element {
 
         <label>End Date:</label>
         <input
+          className='dateInput'
           type='date'
-          min='2022-03-22'
+          min={today}
           {...register('endDate', {
             required: { value: true, message: 'endDate required.' },
           })}
@@ -110,8 +121,8 @@ function UpdateVacation(): JSX.Element {
         {badDate && <span>End date is before Start date.</span>}
         <br />
 
-        <label>Price:</label>
         <input
+          placeholder='Price..'
           type='number'
           min='0'
           {...register('price', {
@@ -125,26 +136,28 @@ function UpdateVacation(): JSX.Element {
         <span>{errors.price?.message}</span>
         <br />
 
-        <label>Image:</label>
+        <label>Upload Image:</label>
         <input
           type='file'
           accept='image/*'
+          id='imageUpload'
+          // style={{ display: "none" }}
           {...register('image', {
             required: { value: true, message: 'image required.' },
           })}
         />
         <span>{errors.image?.message}</span>
         <br />
-
-        <button>Send</button>
+        <input type='submit' value='Submit' />
       </form>
-      <button
-        onClick={() => {
-          navigate('/home');
-        }}
-      >
-        Back
-      </button>
+      <h2>
+        <IoIosArrowBack
+          className='icon'
+          onClick={() => {
+            navigate('/home');
+          }}
+        />
+      </h2>
     </div>
   );
 }

@@ -9,11 +9,6 @@
 
 .App > main {
   height: 100%;
-  background:cornflowerblue;
+  background: rgb(224, 230, 232);
   overflow-y: scroll;
 }
-
-/* p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-} */

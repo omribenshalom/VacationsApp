@@ -14,9 +14,6 @@ class VacationModel {
 
 export default VacationModel;
 
-
-
-
 // SELECT v.vacationId AS id, v.destination, v.description, v.imageName, v.price,
 //             DATE_FORMAT(v.startDate, '%d/%m/%Y') AS startDate, 
 //             DATE_FORMAT(v.endDate,'%d/%m/%Y') AS endDate,

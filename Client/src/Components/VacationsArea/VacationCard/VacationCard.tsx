@@ -87,7 +87,7 @@ function VacationCard(props: VacationCardProps): JSX.Element {
         />
       )}
 
-      <h2>{props.vacation.destination.toUpperCase()}</h2>
+      <h1>{props.vacation.destination.toUpperCase()}</h1>
 
       <p>{props.vacation.description}</p>
       <h5>
@@ -105,6 +105,7 @@ function VacationCard(props: VacationCardProps): JSX.Element {
           <div className='actionsOnCard'>
             <AiFillEdit
               className='icon editIcon'
+              size={20}
               onClick={() => {
                 navigate(`/edit-vacation/${props.vacation.id}`);
               }}
@@ -112,6 +113,7 @@ function VacationCard(props: VacationCardProps): JSX.Element {
 
             <MdDeleteForever
               className='icon deleteIcon'
+              size={20}
               onClick={deleteVacation}
             >
               Delete
@@ -120,9 +122,10 @@ function VacationCard(props: VacationCardProps): JSX.Element {
         ) : (
           <div className='actionsOnCard'>
             {isFollow ? (
-              <MdThumbUp onClick={unFollowVacation} />
+              <MdThumbUp className='icon'
+              onClick={unFollowVacation} />
             ) : (
-              <MdThumbUpOffAlt onClick={followVacation} />
+              <MdThumbUpOffAlt className='icon' onClick={followVacation} />
             )}
           </div>
         )}
