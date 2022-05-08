@@ -1,0 +1,21 @@
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 15% 80% 5%;
+}
+
+.App > main {
+  height: 100%;
+  background: rgb(240, 240, 255);
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    grid-template-rows: 18% 77% 5%;
+    transition: 0.4s;
+  }
+}
