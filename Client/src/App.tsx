@@ -1,17 +1,12 @@
-import Routing from './Components/LayoutArea/Routing/Routing';
-import Navbar from './Components/LayoutArea/Navbar/Navbar';
+import Header from "./Components/LayoutArea/Header/Header";
+import Footer from "./Components/LayoutArea/Footer/Footer";
+import Routing from "./Components/LayoutArea/Routing/Routing";
 
-// import { LocalizationProvider } from '@mui/lab';
-// import AdapterDateFns from '@mui/lab/AdapterDateFns';
-
-import './App.css';
-import Header from './Components/LayoutArea/Header/Header';
-import Footer from './Components/LayoutArea/Footer/Footer';
+import "./App.css";
 
 function App() {
-  return(
-  // <LocalizationProvider dateAdapter={AdapterDateFns}>
-    <div className='App'>
+  return (
+    <div className="App">
       <header>
         <Header />
       </header>
@@ -22,8 +17,7 @@ function App() {
         <Footer />
       </footer>
     </div>
-  // </LocalizationProvider>
-  )
+  );
 }
 
 export default App;
