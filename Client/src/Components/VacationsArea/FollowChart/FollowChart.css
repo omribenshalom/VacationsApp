@@ -1,0 +1,11 @@
+.chartContainer > .chart {
+  background-color: inherit;
+  border: #d6c8cd 1px solid;
+  border-radius: 15px;
+
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 1600px;
+
+}

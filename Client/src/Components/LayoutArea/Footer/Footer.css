@@ -1,0 +1,24 @@
+.Footer {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Footer > h4 {
+  margin: 0 5px;
+  padding: 0;
+}
+
+.Footer > .links-container > a .icon {
+  margin: 0 5px;
+  color: black;
+}
+
+.Footer > .links-container > a :hover {
+  color: #bf1650;
+  transition: 0.3s;
+}

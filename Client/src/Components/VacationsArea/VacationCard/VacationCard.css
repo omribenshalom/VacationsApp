@@ -1,0 +1,84 @@
+.VacationCard {
+  margin: 10px;
+  width: 300px;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 2px 2px 15px rgb(204, 204, 204);
+  background-color: inherit;
+}
+
+.VacationCard:hover {
+  background: rgb(246, 246, 255);
+
+  box-shadow: 5px 10px 15px rgb(188, 166, 190);
+  transition: 0.5s;
+}
+
+.VacationCard > img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  opacity: 80%;
+}
+
+.VacationCard > h1 {
+  position: absolute;
+  top: 1px;
+  letter-spacing: 10px;
+  color: white;
+  text-shadow: 0 5px 5px rgb(44, 57, 77);
+  text-transform: uppercase;
+  max-width: 280px;
+  overflow-x: hidden;
+}
+
+.VacationCard > h3 {
+  margin: 10px 0;
+  padding: 4px 10px;
+  border: #d6c8cd 1px solid;
+  border-radius: 4px;
+  color: black;
+
+  box-shadow: 2px 2px 15px rgb(178, 193, 216);
+}
+
+.VacationCard > h4,
+.VacationCard > .bottomContainer > h4 {
+  margin: 5px 0;
+  color: black;
+}
+
+.VacationCard > p {
+  margin: 5px 0;
+  padding: 5px;
+  height: 50px;
+
+  overflow-y: auto;
+}
+
+.VacationCard > .bottomContainer > .actionsOnCard > .icon {
+  color: black;
+}
+
+.VacationCard > .bottomContainer > .actionsOnCard > .icon:hover {
+  color: #bf1650;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.VacationCard > .bottomContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  border-radius: 10px;
+  margin: 0;
+  padding: 10px;
+  height: 20px;
+}

@@ -1,0 +1,31 @@
+.VacationsList {
+  padding: 20px;
+}
+
+.VacationsList > .navlink {
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: #d6c8cd 1px solid;
+}
+
+.VacationsList > .navlink:hover,
+.VacationsList > .navlink:active {
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+  box-shadow: 2px 5px 10px #bf1650;
+}
+
+.VacationsList > .listContainer {
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  border: #d6c8cd 1px solid;
+  border-radius: 15px;
+}
